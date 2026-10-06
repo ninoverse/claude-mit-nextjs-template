@@ -1,0 +1,42 @@
+name: Bump Version and Tag
+
+# The version logic lives in ninoverse/.github so every repository in the
+# organization derives versions the same way. This file only says *when* to run
+# it, and supplies the app credentials.
+#
+# The called workflow reads the subject of the merged commit, bumps
+# package.json's version with `pnpm version` — `feat` minor,
+# `fix`/`perf`/`refactor`/`revert`/`style`/`chore`/`docs` patch, `!` or
+# BREAKING CHANGE major, anything else not at all — then commits and pushes a
+# matching tag.
+#
+# There is no deploy watching for that tag. This repository is a template; the
+# tag exists so someone can point at the version of it they copied.
+#
+# Requires an organization-level RELEASE_APP_ID variable and
+# RELEASE_APP_PRIVATE_KEY secret. Without them the run fails immediately with a
+# named error rather than obscurely inside the token action.
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+# Two merges in quick succession would otherwise both bump from the same
+# starting version and collide on the tag. Queue rather than cancel: cancelling
+# a run between the commit and the push is the one way to leave those two apart.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  bump:
+    # Pinned to a released version, not @main or a short @v1: @main lands here
+    # with no pull request, and @v1 never moves. Renovate opens the bump.
+    uses: ninoverse/.github/.github/workflows/node-bump-version.yml@v1.11.1
+    with:
+      app-id: ${{ vars.RELEASE_APP_ID }}
+    secrets:
+      app-private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
