@@ -1,0 +1,19 @@
+# Dependencies
+/node_modules
+
+# Next.js: the build, a static export, and the type file `pnpm typecheck` writes
+/.next/
+/out/
+next-env.d.ts
+
+# Tests and types
+/coverage
+*.tsbuildinfo
+
+# Secrets stay on the machine that has them
+.env*
+!.env.example
+
+# Logs and editor droppings
+*.log
+.DS_Store
