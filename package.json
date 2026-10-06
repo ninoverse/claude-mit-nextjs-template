@@ -1,0 +1,39 @@
+{
+    "name": "claude-mit-nextjs-template",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "license": "MIT",
+    "description": "Scaffolding for Next.js projects: the merge gates, the shared workflows and the agent rules in place.",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "biome check --error-on-warnings .",
+        "format": "biome format --write .",
+        "typecheck": "next typegen && tsc --noEmit",
+        "test": "vitest run",
+        "ci": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+    },
+    "dependencies": {
+        "@ninoverse/hmi-components": "^5.14.10",
+        "next": "^16.3.8",
+        "react": "^19.3.0",
+        "react-dom": "^19.3.0"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.5.15",
+        "@types/node": "^24.19.1",
+        "@types/react": "^19.3.0",
+        "@types/react-dom": "^19.3.0",
+        "@vitest/browser-playwright": "^5.0.3",
+        "playwright": "1.63.0",
+        "typescript": "^7.0.2",
+        "vitest": "^5.0.3",
+        "vitest-browser-react": "^2.3.0"
+    },
+    "engines": {
+        "node": ">=22.12.0"
+    },
+    "packageManager": "pnpm@12.9.1"
+}
