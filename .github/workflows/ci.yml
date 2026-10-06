@@ -39,3 +39,14 @@ jobs:
   # `run:` blocks. Its check reads `workflows / actionlint`. Pinned like `ci`.
   workflows:
     uses: ninoverse/.github/.github/workflows/actionlint.yml@v1.11.1
+
+  # The composed agent rules are what .agentprofile.yml composes: a profile
+  # change without `pnpm agentcfg sync`, or a hand edit between the agentcfg
+  # markers, fails here. The script fetches a static binary, so nothing is
+  # installed.
+  agentcfg:
+    name: agentcfg check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sh scripts/agentcfg.sh check

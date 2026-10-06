@@ -13,6 +13,7 @@
         "format": "biome format --write .",
         "typecheck": "next typegen && tsc --noEmit",
         "test": "vitest run",
+        "agentcfg": "sh scripts/agentcfg.sh",
         "ci": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
     },
     "dependencies": {
