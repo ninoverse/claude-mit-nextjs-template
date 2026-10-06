@@ -1,0 +1,34 @@
+name: Audit
+
+# Advisories are published against dependencies you already have, with no commit
+# on your side. A push trigger would never fire for them, so this runs on a
+# schedule — and on changes to the dependency set, where a new advisory could
+# arrive with the bump.
+#
+# The job itself lives in ninoverse/.github; this file only sets the triggers.
+# The policy, which advisories are accepted, belongs in pnpm-workspace.yaml once
+# there is one, so a change to it runs the audit too.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # Mondays, 06:00 UTC
+  push:
+    branches: [main]
+    paths:
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "pnpm-workspace.yaml"
+  pull_request:
+    paths:
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - "pnpm-workspace.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    # Pinned like the jobs in ci.yml. Renovate opens the bump.
+    uses: ninoverse/.github/.github/workflows/node-audit.yml@v1.11.1
