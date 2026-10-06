@@ -13,7 +13,7 @@ export function Welcome() {
         <Card variant="accent">
             <h1>claude-mit-nextjs-template</h1>
             <p>
-                Edit <code>app/page.tsx</code> to start.
+                Edit <code>src/app/page.tsx</code> to start.
             </p>
             <Badge variant="primary">Next.js</Badge>
         </Card>
