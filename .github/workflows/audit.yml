@@ -31,4 +31,4 @@ permissions:
 jobs:
   audit:
     # Pinned like the jobs in ci.yml. Renovate opens the bump.
-    uses: ninoverse/.github/.github/workflows/node-audit.yml@v1.11.1
+    uses: ninoverse/.github/.github/workflows/node-audit.yml@v1.11.2
