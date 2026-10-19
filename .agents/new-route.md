@@ -1,5 +1,5 @@
 <!-- agentcfg:start -->
-<!-- framework/nextjs/tasks/new-route.md · v1.2.0 -->
+<!-- framework/nextjs/tasks/new-route.md · v1.2.1 -->
 # Adding a route
 
 The exact procedure for adding or modifying a single route. Follow every step

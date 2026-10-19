@@ -1,5 +1,5 @@
 <!-- agentcfg:start -->
-<!-- framework/nextjs/file-naming.md · v1.2.0 -->
+<!-- framework/nextjs/file-naming.md · v1.2.1 -->
 # App files
 
 An app has no `src/index.ts`: its routes are its entry points, and the folders

@@ -4,7 +4,7 @@ description: "Add a route following the 6-step route workflow"
 argument-hint: "<url> [one-line description of the page]"
 ---
 
-<!-- framework/nextjs/tasks/new-route.md · v1.2.0 -->
+<!-- framework/nextjs/tasks/new-route.md · v1.2.1 -->
 # Adding a route
 
 The exact procedure for adding or modifying a single route. Follow every step

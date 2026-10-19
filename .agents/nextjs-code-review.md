@@ -1,5 +1,5 @@
 <!-- agentcfg:start -->
-<!-- framework/nextjs/code-review.md · v1.2.0 -->
+<!-- framework/nextjs/code-review.md · v1.2.1 -->
 # Next.js review
 
 For a PR that changes the app, alongside *Code review* and *TypeScript code

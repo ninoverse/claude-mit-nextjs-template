@@ -1,5 +1,5 @@
 <!-- agentcfg:start -->
-<!-- framework/nextjs/pr-guidelines.md · v1.2.0 -->
+<!-- framework/nextjs/pr-guidelines.md · v1.2.1 -->
 # Route table
 
 A PR that adds a route, or changes how one renders, carries the route's lines
