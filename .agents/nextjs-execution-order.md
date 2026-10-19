@@ -1,5 +1,5 @@
 <!-- agentcfg:start -->
-<!-- framework/nextjs/execution-order.md · v1.2.0 -->
+<!-- framework/nextjs/execution-order.md · v1.2.1 -->
 # Route sequencing
 
 Routes are the unit of work here: the app holds many, and each PR builds one.

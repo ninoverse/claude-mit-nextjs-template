@@ -1,5 +1,5 @@
 <!-- agentcfg:start -->
-<!-- framework/nextjs/testing.md · v1.2.0 -->
+<!-- framework/nextjs/testing.md · v1.2.1 -->
 # Next.js tests
 
 What *Testing instructions* runs, as it applies to the app. Component tests run

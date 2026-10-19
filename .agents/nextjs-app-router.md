@@ -1,5 +1,5 @@
 <!-- agentcfg:start -->
-<!-- framework/nextjs/app-router.md · v1.2.0 -->
+<!-- framework/nextjs/app-router.md · v1.2.1 -->
 # App Router
 
 ## Server and Client Components

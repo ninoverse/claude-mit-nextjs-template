@@ -19,7 +19,7 @@ fragments, not here.
   rather than values of their own.
 
 <!-- agentcfg:start -->
-<!-- language/typescript/tooling.md · v1.2.0 -->
+<!-- language/typescript/tooling.md · v1.2.1 -->
 # Build and test commands
 
 **Toolchain:** TypeScript on Node, with pnpm only — never `npm` or `yarn`, whose lockfiles and resolution differ. pnpm is pinned by `packageManager` in `package.json`, and Node by `.nvmrc`. Once per machine, install the Node `.nvmrc` names and run `corepack enable`, which then provides the pnpm `packageManager` names.
@@ -52,7 +52,7 @@ that needs another tool changes the script; the script names stay.
 
 **Node floor:** `engines.node` is the oldest Node the package supports, repeated as the `node-floor` input of the workflow that calls `node-ci.yml`, whose floor job fails a partial bump. Raising it means editing both together. Do not raise it incidentally. `.nvmrc` only pins development, and moves freely.
 
-<!-- core/behavior.md · v1.2.0 -->
+<!-- core/behavior.md · v1.2.1 -->
 # Behavioral guidelines
 
 **Maintain the Build:** Never leave the codebase in a state where build, lint,
@@ -92,7 +92,7 @@ your work before concluding a task.
 - Transform tasks into verifiable goals (e.g., "Add validation" → "Write tests for invalid inputs, then make them pass").
 - For multi-step tasks, state a brief plan and verify each step independently.
 
-<!-- framework/nextjs/docs.md · v1.2.0 -->
+<!-- framework/nextjs/docs.md · v1.2.1 -->
 # Next.js documentation
 
 The installed Next.js may not be the one you learned: its APIs, file
@@ -106,7 +106,7 @@ remember disagree, the guide wins, and so do its deprecation notices.
 Keep `agentRules: false` in `next.config.ts`. This section replaces the block
 `next dev` would otherwise write into AGENTS.md.
 
-<!-- concerns/template/rules.md · v1.2.0 -->
+<!-- concerns/template/rules.md · v1.2.1 -->
 # Template repository
 
 This repository is a GitHub template: new projects start as a copy of it, and
@@ -122,7 +122,7 @@ every copy inherits everything here.
 - A project created from this template removes `template` from `concerns` in its
   `.agentprofile.yml`.
 
-<!-- agentcfg:index · v1.2.0 -->
+<!-- agentcfg:index · v1.2.1 -->
 # Extended rules
 
 Read these when they apply; they are not loaded by default.
