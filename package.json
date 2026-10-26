@@ -18,23 +18,23 @@
     },
     "dependencies": {
         "@ninoverse/hmi-components": "^5.14.10",
-        "next": "^16.3.8",
-        "react": "^19.3.0",
-        "react-dom": "^19.3.0"
+        "next": "^16.4.3",
+        "react": "^19.3.1",
+        "react-dom": "^19.3.1"
     },
     "devDependencies": {
-        "@biomejs/biome": "^2.5.15",
-        "@types/node": "^24.19.1",
+        "@biomejs/biome": "^2.6.3",
+        "@types/node": "^24.19.2",
         "@types/react": "^19.3.0",
         "@types/react-dom": "^19.3.0",
-        "@vitest/browser-playwright": "^5.0.3",
-        "playwright": "1.63.0",
+        "@vitest/browser-playwright": "^5.0.5",
+        "playwright": "1.64.1",
         "typescript": "^7.0.2",
-        "vitest": "^5.0.3",
+        "vitest": "^5.0.5",
         "vitest-browser-react": "^2.3.0"
     },
     "engines": {
         "node": ">=22.12.0"
     },
-    "packageManager": "pnpm@12.9.1"
+    "packageManager": "pnpm@12.15.0"
 }
